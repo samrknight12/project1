@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Login </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+    	 background-color: #eefac3
+
+    }
+    .header {
+      text-align: center;
+      font-family: georgia, sans-serif;
+      margin-top: 100px;
+      padding: 20px;
+      background: #dbeba4;
+      border-radius: 25px;
+      opacity: 0.9;
+      color: #2e2929;
+      font-size: 20px;
+      text-decoration-color: black;
+    }
+    .button1 {
+      background-color: #dbeba4;
+      border: none;
+      color: #2e2929;
+      padding: 15px 32px;
+      display: block;
+      margin-top: 50px;
+      margin-left: 30%;
+      margin-right: 30%;
+      text-align: center;
+      font-size: 30px;
+      border-radius: 10px;
+      opacity: 0.5;
+    }
+    .button1:hover {
+      opacity: 0.8;
+    }
+    input {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      text-size:10px;
+    }
+    .btn-primary{
+      width: 100%;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Login</h1>
+    </div>
+    <a href="{{url_for('index')}}" class="button1" role="button">home</a>
+    <form action="/login" method="post" autocomplete="off">
+      <input type="text" name="username" placeholder="Username"/>
+      <input type="password" name="password" placeholder="Password"/>
+
+    <button class="btn btn-primary" type="submit">Log in</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Homepage </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+    	 background-color: #eefac3
+
+    }
+    .header {
+      text-align: center;
+      font-family: georgia, sans-serif;
+      margin-top: 100px;
+      padding: 20px;
+      background: #dbeba4;
+      border-radius: 25px;
+      opacity: 0.9;
+      color: #2e2929;
+      font-size: 30px;
+      text-decoration-color: black;
+    }
+    .button1 {
+      background-color: #dbeba4;
+      border: none;
+      color: #2e2929;
+      padding: 15px 32px;
+      display: block;
+      margin-top: 50px;
+      margin-left: 30%;
+      margin-right: 30%;
+      text-align: center;
+      font-size: 30px;
+      border-radius: 10px;
+      opacity: 0.5;
+    }
+    .button1:hover {
+      opacity: 0.8;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Book Reviews</h1>
+      <h2>Home Page</h2>
+    </div>
+    <a href="{{url_for('login')}}" class="button1" role="button">Login</a>
+    <a href="{{url_for('signup')}}" class="button1" role="button">Sign Up</a>
+
+  </body>
+</html>

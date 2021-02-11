@@ -1,0 +1,28 @@
+{% extends "template.html" %}
+
+{% block title %}
+  Books Listed
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-lg-12 col-sm-12">
+    <div class="container">
+      <a href="{{url_for('logout')}}" class="button1" role="button">Logout</a>
+    </div>
+  </div>
+</div>
+  {% for book in books %}
+    <div class="row">
+      <div class="col-lg-12 col-sm-12">
+        <div class="container">
+          <h4> {{book['title']}}</h4>
+          <h5> {{book['author']}}</h5>
+          <h6> {{book['yer']}}</h6>
+          <h6> {{book['isbn']}}</h6>
+          <a href="/rating/{{book['isbn']}}"> View Book Rating</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}

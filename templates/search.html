@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Search </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+           background-color: #eefac3
+        }
+      .header {
+        text-align: center;
+        font-family: georgia, sans-serif;
+        margin-top: 100px;
+        padding: 20px;
+        background: #dbeba4;
+        border-radius: 25px;
+        opacity: 0.9;
+        color: #2e2929;
+        font-size: 20px;
+        text-decoration-color: black;
+        }
+      input {
+        box-sizing:border-box;
+        width:80%;
+        text-align: center;
+      }
+      </style>
+  </head>
+  <body>
+    <div class="header">
+    <h1> Search Books</h1>
+    <form action="/search" method="GET">
+      <input type="text" name="searched" placeholder="Search By Title, Author, or ISBN !">
+    </form>
+    </div>
+  </body>
+</html>

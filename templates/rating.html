@@ -1,0 +1,68 @@
+{% extends "template.html" %}
+
+{% block title %}
+  Rating
+{% endblock %}
+
+{% block content %}
+  {% for book in books %}
+    <div class="row">
+      <div class="col-lg-12 col-sm-12">
+        <div class="container">
+          <h4> {{book['title']}}</h4>
+          <h5> {{book['author']}}</h5>
+          <h6> {{book['yer']}}</h6>
+          <h6> {{book['isbn']}}</h6>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    <div class="row">
+      <div class="col-lg-12 col-sm-12">
+        <div class="container">
+          <h4> Google Books Rating <h4>
+          <h3>{{averageRating}}</h3>
+          <h4> From Number of Ratings </h4>
+          <h3>{{ratingsCount}}</h3>
+        </div>
+      </div>
+    </div>
+    {% for book in books %}
+    <div class="row">
+      <div class="col-lg-12 col-sm-12">
+        <div class="container">
+          <h3>Rate It!</h3>
+          <form action="/rating/<isbn>" method="post" autocomplete="off">
+            <select id="UserRatings", name="UserRatings">
+              <option selected> Rate out of 5 </option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <select id="ConfirmISBN", name="ConfirmISBN">
+              <option selected> Confirm Submittion, You Can Not Submit Twice </option>
+              <option value="{{book['isbn']}}">Yes</option>
+              <option value="0">No</option>
+            </select>
+            <input type="text" name="UserComment" placeholder="Leave a Comment!"/>
+          </form>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    <h4>See What Other Users Are Saying!</h4>
+    {% for review in reviews %}
+    <div class="row">
+      <div class="col-lg-12 col-sm-12">
+        <div class="container">
+          <h6> Rating:</h6>
+          <h6>{{review['rating']}}</h6>
+          <h6> Comment:</h6>
+          <h6>{{review['com']}}</h6>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+{% endblock %}
